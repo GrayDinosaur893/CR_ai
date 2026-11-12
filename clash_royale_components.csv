@@ -1,0 +1,15 @@
+No,Category,Component Name,Identified Content / Entity,Pixel Box [Y1 X1 Y2 X2],Size (WxH),Confidence,Tactical & Strategic Role
+1,HUD,Match Timer & Score,Timer: 2:48 (Standard Regulation 1x Elixir),[9, 184, 48, 286],102x39 px,98.0%,Tracks match pacing overtime countdown & crown score
+2,Tower,Opponent King Tower,Opponent King Tower (Level 14 4008 HP),[57, 119, 128, 178],59x71 px,98.0%,Primary win-condition target; unactivated until damaged
+3,Tower,Opponent Princess (Left),Opponent Left Princess Tower (Level 14 2534 HP),[102, 47, 179, 107],60x77 px,98.0%,Main defense objective on left lane; target for punish push
+4,Tower,Opponent Princess (Right),Opponent Right Princess Tower (Level 14 2534 HP),[102, 190, 179, 250],60x77 px,98.0%,Main defense objective on right lane
+5,Arena,River & Bridges (Row 15-16),River & Left/Right Bridge Chokepoints (Row 15-16),[268, 23, 332, 274],251x64 px,98.0%,Primary territorial boundary; chokepoint for splash spells & splashers
+6,Tower,Player Princess (Left),Player Left Princess Tower (Level 14 Full HP),[409, 47, 492, 107],60x83 px,98.0%,Our primary lane defense; must protect against opposite-lane punish
+7,Tower,Player Princess (Right),Player Right Princess Tower (Level 14 Full HP),[409, 190, 492, 250],60x83 px,98.0%,Our right lane defense anchor
+8,Tower,Player King Tower,Player King Tower (Level 14 Full HP),[473, 119, 550, 178],59x77 px,98.0%,Core fortress; activating King adds defensive cannon
+9,Hand,Next Card Queue,Next Card Queue: Upcoming Card Preview,[556, 8, 620, 53],45x64 px,95.0%,Crucial for cycle tracking & preparing future elixir investments
+10,Hand,Hand Slot 1,Card: The Log (Spell 2 Elixir),[544, 68, 620, 116],48x76 px,95.0%,Ground swarm sweeper knockback & chip damage on tower
+11,Hand,Hand Slot 2,Card: Goblin Gang / Swarm (Troop 3 Elixir),[544, 125, 620, 172],47x76 px,95.0%,High DPS tank shredder & bridge distraction unit
+12,Hand,Hand Slot 3,Card: Skeleton Army (Swarm 3 Elixir),[544, 181, 620, 229],48x76 px,95.0%,Single-target tank killer (P.E.K.K.A Prince Giant counter)
+13,Hand,Hand Slot 4,Card: Wizard / Heavy Ranged (Ranged 5 Elixir),[544, 238, 620, 286],48x76 px,95.0%,Air & Ground AoE splash damage behind tank
+14,Elixir,Elixir Bar (0-10),Elixir Bar Gauge: ~2.3 / 10.0 Elixir,[622, 65, 638, 286],221x16 px,95.0%,Fundamental resource constraint governing all tactical deployments

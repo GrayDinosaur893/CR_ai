@@ -1,0 +1,32 @@
+{
+  "screen": "battle_end",
+  "confidence": "high",
+  "components": [
+    {
+      "name": "trophy_count",
+      "box_pct": [0.19, 0.1, 0.26, 0.13],
+      "seen": true
+    },
+    {
+      "name": "trophy_count",
+      "box_pct": [0.19, 0.53, 0.26, 0.56],
+      "seen": true
+    },
+    {
+      "name": "gold_display",
+      "box_pct": [0.15, 0.28, 0.37, 0.37],
+      "seen": true
+    },
+    {
+      "name": "collect_button",
+      "box_pct": [0.38, 0.36, 0.55, 0.44],
+      "seen": true
+    },
+    {
+      "name": "ok_button",
+      "box_pct": [0.45, 0.95, 0.67, 0.99],
+      "seen": true
+    }
+  ],
+  "unknown": []
+}

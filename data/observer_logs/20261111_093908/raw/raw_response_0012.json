@@ -1,0 +1,17 @@
+{
+  "screen": "battle_end",
+  "confidence": "high",
+  "components": [
+    {
+      "name": "trophy_count",
+      "box_pct": [0.58, 0.72, 0.69, 0.78],
+      "seen": true
+    },
+    {
+      "name": "card_slot_1",
+      "box_pct": [0.44, 0.42, 0.71, 0.71],
+      "seen": true
+    }
+  ],
+  "unknown": []
+}

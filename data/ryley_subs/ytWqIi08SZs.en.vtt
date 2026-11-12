@@ -1,0 +1,416 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.840 --> 00:00:08.400
+yo what's going on guys in today's video i'm going&nbsp;
+to be teaching you how to count your opponent's&nbsp;&nbsp;
+
+00:00:08.400 --> 00:00:13.440
+elixir in clash royale elixir counting can be a&nbsp;
+bit tricky to learn so i've broken it down into&nbsp;&nbsp;
+
+00:00:13.440 --> 00:00:17.360
+three simple techniques which will help you&nbsp;
+count your opponent's elixir so first we're&nbsp;&nbsp;
+
+00:00:17.360 --> 00:00:22.000
+going to be going over one of the replays i had so&nbsp;
+you guys can see some of the techniques that i use&nbsp;&nbsp;
+
+00:00:22.000 --> 00:00:27.360
+and then we'll hop into a match for a live&nbsp;
+demonstration so the first technique is&nbsp;&nbsp;
+
+00:00:27.360 --> 00:00:31.840
+to take things simply elixir counting is just&nbsp;
+knowing the cost of each unit your opponent plays&nbsp;&nbsp;
+
+00:00:31.840 --> 00:00:36.720
+and subtracting that from their initial elixir at&nbsp;
+the start of the match it's not complicated math&nbsp;&nbsp;
+
+00:00:36.720 --> 00:00:41.200
+or anything like that so clash royale is a very&nbsp;
+fast paced game it can be hard to actually keep&nbsp;&nbsp;
+
+00:00:41.200 --> 00:00:45.360
+track of everything while you're in a match so&nbsp;
+stick around for the other techniques to find ways&nbsp;&nbsp;
+
+00:00:45.360 --> 00:00:50.000
+to implement elixir counting in your own gameplay&nbsp;
+things may be hard at first but with enough&nbsp;&nbsp;
+
+00:00:50.000 --> 00:00:54.160
+practice it becomes a natural instinct and you&nbsp;
+won't even have to put any thought into it a lot&nbsp;&nbsp;
+
+00:00:54.160 --> 00:00:58.400
+of top players like me always know what elixir our&nbsp;
+opponent has even without putting a second ball
+
+00:01:00.480 --> 00:01:05.040
+the second technique is to actually give it a try&nbsp;
+pop into a few matches and try to be a little bit&nbsp;&nbsp;
+
+00:01:05.040 --> 00:01:09.120
+more aware of how much elixir your opponent&nbsp;
+has do some quick math in your head if you&nbsp;&nbsp;
+
+00:01:09.120 --> 00:01:13.680
+have to and eventually you'll start to develop&nbsp;
+elixir counting as an instinct earlier on it is&nbsp;&nbsp;
+
+00:01:13.680 --> 00:01:17.360
+a good idea to watch a few of your replays&nbsp;
+and see how much elixir your opponent had&nbsp;&nbsp;
+
+00:01:17.360 --> 00:01:21.760
+compared to what you thought they had during the&nbsp;
+match nobody can play perfect clash royale while&nbsp;&nbsp;
+
+00:01:21.760 --> 00:01:25.760
+doing math from their head but their goal is to&nbsp;
+be able to eventually get the same feel for elixir&nbsp;&nbsp;
+
+00:01:25.760 --> 00:01:29.920
+without doing any math a couple of bonus things&nbsp;
+to take note of are when your opponent drops a&nbsp;&nbsp;
+
+00:01:29.920 --> 00:01:34.400
+card late like a heavily delayed mini pekka on&nbsp;
+your hog rider they're probably down in elixir&nbsp;&nbsp;
+
+00:01:34.400 --> 00:01:39.520
+or just have horrible wifi when your opponent&nbsp;
+drops a card in the back after a match reset&nbsp;&nbsp;
+
+00:01:39.520 --> 00:01:44.080
+point where neither player plays anything they are&nbsp;
+probably at 10 elixir noticing these little things&nbsp;&nbsp;
+
+00:01:44.080 --> 00:01:48.320
+can help you a lot with elixir counting feel free&nbsp;
+to comment down below if you have any questions&nbsp;&nbsp;
+
+00:01:48.320 --> 00:01:52.880
+about elixir counting you can also watch the&nbsp;
+video multiple times if needed now be ready for&nbsp;&nbsp;
+
+00:01:52.880 --> 00:01:57.200
+the third and possibly most important technique so&nbsp;
+in the actual replay you guys can see we're just&nbsp;&nbsp;
+
+00:01:57.200 --> 00:02:01.200
+absolutely wrecking him knowing what he's going&nbsp;
+to play most of the time just based on his elixir&nbsp;&nbsp;
+
+00:02:01.760 --> 00:02:05.760
+i think we do get a very nice king tower&nbsp;
+activation here too against his bandit yeah&nbsp;&nbsp;
+
+00:02:05.760 --> 00:02:10.000
+that was super nice for me and by the way guys we&nbsp;
+will hop into the third technique pretty soon here&nbsp;&nbsp;
+
+00:02:10.000 --> 00:02:15.120
+we just want to kind of explain my thought process&nbsp;
+in this game so well i was getting like positive&nbsp;&nbsp;
+
+00:02:15.120 --> 00:02:19.280
+elixir trades on defense with our princesses&nbsp;
+and stuff like that then going with their goblin&nbsp;&nbsp;
+
+00:02:19.280 --> 00:02:23.600
+barrels after that just to make sure we're not&nbsp;
+gonna put ourselves in too bad of an elixir spot&nbsp;&nbsp;
+
+00:02:25.040 --> 00:02:27.840
+so yeah it's pretty hard for him to defend&nbsp;
+our barrels since we can always try to out&nbsp;&nbsp;
+
+00:02:27.840 --> 00:02:32.320
+cycling pretty well and we do have pretty good&nbsp;
+defense now that the king tower got activated&nbsp;&nbsp;
+
+00:02:33.280 --> 00:02:37.040
+so my thought process here is just to kind&nbsp;
+of defend and chuck a few barrels maybe a&nbsp;&nbsp;
+
+00:02:37.040 --> 00:02:41.840
+few rockets here and there and just kind of rely&nbsp;
+on that king tower for the defense i did go with&nbsp;&nbsp;
+
+00:02:41.840 --> 00:02:44.560
+my princess at that bridge right there i didn't&nbsp;
+know he was pretty much the same with like stress&nbsp;&nbsp;
+
+00:02:44.560 --> 00:02:48.880
+me but i kind of wanted to surprise him and i was&nbsp;
+hoping he'd play his canon car all the way in the&nbsp;&nbsp;
+
+00:02:48.880 --> 00:02:53.520
+back instead of like right in the middle i do&nbsp;
+go with my rocket on his tower there i couldn't&nbsp;&nbsp;
+
+00:02:53.520 --> 00:02:57.120
+really play like a dog prince or something&nbsp;
+like that in the back so worked out pretty&nbsp;&nbsp;
+
+00:02:57.120 --> 00:03:01.120
+fine for me since he had to wait a few seconds&nbsp;
+before actually applying the pressure on us&nbsp;&nbsp;
+
+00:03:02.160 --> 00:03:06.320
+normally i wouldn't rock it cycle that early but&nbsp;
+i knew that our king tower would kind of carry us&nbsp;&nbsp;
+
+00:03:06.320 --> 00:03:09.520
+and this candy cart does get awfully close to&nbsp;
+our tower luckily the cannon does come down in&nbsp;&nbsp;
+
+00:03:09.520 --> 00:03:14.640
+the last second though so i was just barely able&nbsp;
+to defend nicely i think i do go right in with&nbsp;&nbsp;
+
+00:03:14.640 --> 00:03:19.680
+another barrel right here just to get even more&nbsp;
+damage going he doesn't have any bar growing cycle&nbsp;&nbsp;
+
+00:03:19.680 --> 00:03:23.040
+and yeah i guess right now we're just going&nbsp;
+to hop into the third and final technique&nbsp;&nbsp;
+
+00:03:24.960 --> 00:03:29.360
+so the third and final technique is to actually&nbsp;
+use elixir counting to your advantage you can&nbsp;&nbsp;
+
+00:03:29.360 --> 00:03:32.640
+be really aggressive when you have that three&nbsp;
+elixir for a goblin barrel and you know your&nbsp;&nbsp;
+
+00:03:32.640 --> 00:03:36.720
+opponent is at zero elixir a good example of&nbsp;
+this that i experienced recently was when an&nbsp;&nbsp;
+
+00:03:36.720 --> 00:03:41.120
+opponent played a ram riderer behind his king&nbsp;
+tower he could have been fluffing his elixir&nbsp;&nbsp;
+
+00:03:41.120 --> 00:03:44.720
+with all of my practice counting elixir&nbsp;
+i knew that we were just about even&nbsp;&nbsp;
+
+00:03:44.720 --> 00:03:49.680
+so i had two choices i could either rock&nbsp;
+it and his tower for a hefty 591 damage&nbsp;&nbsp;
+
+00:03:49.680 --> 00:03:53.920
+only taking a negative one elixir trade or i could&nbsp;
+have gone with my cannon on it for a plus two&nbsp;&nbsp;
+
+00:03:53.920 --> 00:03:58.960
+trade by getting no damage on his tower i decided&nbsp;
+to rocket it and that ended up saving me the match&nbsp;&nbsp;
+
+00:03:58.960 --> 00:04:02.160
+but all in all it was really just thanks to my&nbsp;
+elixir counting that i knew i could take the&nbsp;&nbsp;
+
+00:04:02.160 --> 00:04:06.400
+negative one trade at that point in the match so&nbsp;
+essentially this technique is just here to show&nbsp;&nbsp;
+
+00:04:06.400 --> 00:04:11.120
+you that you should play differently based on if&nbsp;
+you are up or down in elixir at any given point i&nbsp;&nbsp;
+
+00:04:11.120 --> 00:04:15.040
+see way too many people going for those negative&nbsp;
+traits or over aggressive pushes thinking they&nbsp;&nbsp;
+
+00:04:15.040 --> 00:04:20.080
+are up in elixir when they're actually already&nbsp;
+down a few especially in the ladder okay so now&nbsp;&nbsp;
+
+00:04:20.080 --> 00:04:23.520
+let's just hop into a live match so you guys&nbsp;
+can see me using these different techniques
+
+00:04:27.600 --> 00:04:31.040
+all right so i just found a match right here&nbsp;
+we're going to be running this really quick&nbsp;&nbsp;
+
+00:04:31.040 --> 00:04:35.120
+log base cycle deck i think log bait's&nbsp;
+a really good deck for counting elixir&nbsp;&nbsp;
+
+00:04:35.120 --> 00:04:38.640
+super nice to punish your opponents with&nbsp;
+when they're a little bit low on elixir&nbsp;&nbsp;
+
+00:04:39.920 --> 00:04:43.360
+i'm not really too sure what this guy's playing&nbsp;
+pretty interesting decks being the goblin gang&nbsp;&nbsp;
+
+00:04:44.080 --> 00:04:47.280
+but he did just raised his app and quite a&nbsp;
+few other little things so i'm gonna go with&nbsp;&nbsp;
+
+00:04:47.280 --> 00:04:51.360
+my barrel right here maybe get some pretty&nbsp;
+nice damage there one valkyrie swing as well&nbsp;&nbsp;
+
+00:04:52.560 --> 00:04:57.760
+he does have battle ram here too could be a three&nbsp;
+musketeer deck maybe i'm gonna go with my log&nbsp;&nbsp;
+
+00:04:57.760 --> 00:05:02.240
+right here he obviously spent a lot of elixir on&nbsp;
+his minion horde and everything but we also had&nbsp;&nbsp;
+
+00:05:02.240 --> 00:05:06.800
+to spend a lot of elixir on defense and since&nbsp;
+we spent our barrel on offense earlier i think&nbsp;&nbsp;
+
+00:05:06.800 --> 00:05:12.480
+we're probably down like maybe three elixir or&nbsp;
+so not really 100 sure but i kind of know roughly&nbsp;&nbsp;
+
+00:05:13.600 --> 00:05:16.400
+so i'm gonna kind of just wait here to see&nbsp;
+what he does and yeah i was pretty much right&nbsp;&nbsp;
+
+00:05:16.400 --> 00:05:20.640
+on his elixir i'm gonna go with my barrel on&nbsp;
+his pump instead of like a rocket normally&nbsp;&nbsp;
+
+00:05:20.640 --> 00:05:24.640
+people go with a rocket on it but i know we're&nbsp;
+down a few elixirs so kind of just wanna get&nbsp;&nbsp;
+
+00:05:24.640 --> 00:05:29.120
+the best trades we can because rocket is always a&nbsp;
+negative one elixir trade on the elixir collector&nbsp;&nbsp;
+
+00:05:30.080 --> 00:05:33.760
+and i kind of want to save it for his three&nbsp;
+musketeers as well seeing the pump it probably&nbsp;&nbsp;
+
+00:05:33.760 --> 00:05:39.200
+will be a giant three musketeer deck like one&nbsp;
+of the more old school decks in clash royale&nbsp;&nbsp;
+
+00:05:40.960 --> 00:05:44.800
+shouldn't be too hard on defense here since&nbsp;
+we do have the rock in hand so that should be&nbsp;&nbsp;
+
+00:05:44.800 --> 00:05:48.640
+pretty nice for us uh he just plays three&nbsp;
+musketeers a little bit early right there&nbsp;&nbsp;
+
+00:05:48.640 --> 00:05:52.960
+i think he meant to play after our princess locked&nbsp;
+on his tower so should make those three i'm pretty&nbsp;&nbsp;
+
+00:05:52.960 --> 00:05:57.840
+easy to deal with just gonna go with my vlog&nbsp;
+right here honestly we should be up in elixir&nbsp;&nbsp;
+
+00:05:57.840 --> 00:06:01.680
+after this really good defense but i think we're&nbsp;
+actually gonna be probably even down a little&nbsp;&nbsp;
+
+00:06:01.680 --> 00:06:06.400
+bit just because of the elixir collector&nbsp;
+on the field that he has there it's really&nbsp;&nbsp;
+
+00:06:06.400 --> 00:06:10.400
+hard to count elixir when they have like elixir&nbsp;
+collectors on the board so definitely gonna be&nbsp;&nbsp;
+
+00:06:10.400 --> 00:06:14.800
+quite hard to actually know how much elixir he'll&nbsp;
+have in this match but i love the general view&nbsp;&nbsp;
+
+00:06:16.000 --> 00:06:20.160
+he's gonna have to spend that game there on&nbsp;
+our princess i'll take it i do have quite a&nbsp;&nbsp;
+
+00:06:20.160 --> 00:06:24.640
+few counters to like his various stuff we do have&nbsp;
+like the fire spirit and princess for his minion&nbsp;&nbsp;
+
+00:06:24.640 --> 00:06:28.800
+horde and like a few a few different counters&nbsp;
+to like the goblin gang and stuff like that&nbsp;&nbsp;
+
+00:06:29.440 --> 00:06:33.040
+i'm gonna go with my barrel right here should&nbsp;
+force out something and yeah he's definitely&nbsp;&nbsp;
+
+00:06:33.040 --> 00:06:37.200
+up a ton of elixir right here no need to really&nbsp;
+even say it because you guys already can tell by&nbsp;&nbsp;
+
+00:06:37.200 --> 00:06:41.360
+all these pumps on the field that he's definitely&nbsp;
+gonna be up a ton of elixir i'm gonna go with the&nbsp;&nbsp;
+
+00:06:41.360 --> 00:06:45.440
+prediction log here hopefully hitting his 3m yeah&nbsp;
+perfect vlog they're also gonna hit the elixir&nbsp;&nbsp;
+
+00:06:45.440 --> 00:06:51.120
+collector too so that's a super good log really&nbsp;
+just the benefit of counting elixir i'm kind of&nbsp;&nbsp;
+
+00:06:51.120 --> 00:06:54.960
+doing it all in my head right now so it's a little&nbsp;
+bit hard to actually commentate everything but&nbsp;&nbsp;
+
+00:06:54.960 --> 00:06:58.560
+i hope you guys can kind of get like a&nbsp;
+general sense of what i'm trying to do here&nbsp;&nbsp;
+
+00:06:59.680 --> 00:07:02.960
+so we'll go with the pump right there i'm&nbsp;
+gonna probably try to go with my barrel on it&nbsp;&nbsp;
+
+00:07:02.960 --> 00:07:06.400
+can't really afford to spend my rocket&nbsp;
+right now since i'm quite low on elixir&nbsp;&nbsp;
+
+00:07:07.680 --> 00:07:12.960
+the goblins do get some nice damage from the&nbsp;
+pump though so definitely let me take that and&nbsp;&nbsp;
+
+00:07:12.960 --> 00:07:16.640
+yeah i'm probably just gonna set up my valkyrie&nbsp;
+in the back here you always have the rocket for&nbsp;&nbsp;
+
+00:07:16.640 --> 00:07:21.600
+his uh 3m we have like the different splash units&nbsp;
+for his minion horde so not really feeling too&nbsp;&nbsp;
+
+00:07:21.600 --> 00:07:26.320
+bad about the defense i'm not even sure if i'll&nbsp;
+rocket these three n just because i know we're&nbsp;&nbsp;
+
+00:07:26.320 --> 00:07:31.280
+down a lot of elixir so we need to really just&nbsp;
+make sure we're defending as cheaply as we can&nbsp;&nbsp;
+
+00:07:31.280 --> 00:07:34.960
+okay that princess actually got so much damage&nbsp;
+in the right lane so we really just need like a&nbsp;&nbsp;
+
+00:07:34.960 --> 00:07:38.880
+yeah maybe this barrel should be able to&nbsp;
+take it i think yeah i think it will take&nbsp;&nbsp;
+
+00:07:38.880 --> 00:07:48.400
+us to spend the minion horde so thank you guys&nbsp;
+for watching and see you in the next one bye
+

@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "description": "Ground truth manual labels for Clash Royale screen states and components.",
+  "frames": [
+    {
+      "frame_file": "frame_0000.png",
+      "expected_screen": "battle_arena",
+      "components": [
+        {
+          "name": "card_slot_1",
+          "box_pct": [0.28, 0.78, 0.42, 0.94]
+        },
+        {
+          "name": "card_slot_2",
+          "box_pct": [0.43, 0.78, 0.57, 0.94]
+        },
+        {
+          "name": "card_slot_3",
+          "box_pct": [0.58, 0.78, 0.72, 0.94]
+        },
+        {
+          "name": "card_slot_4",
+          "box_pct": [0.73, 0.78, 0.87, 0.94]
+        },
+        {
+          "name": "elixir_bar",
+          "box_pct": [0.18, 0.95, 0.92, 0.99]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "enemy_tp": 15,
+  "enemy_gt": 18,
+  "enemy_fp_keyframes": 0,
+  "enemy_recall_pct": 83.33,
+  "ally_tp": 1,
+  "ally_gt": 4,
+  "ally_fp_keyframes": 3,
+  "idle_frames_checked": 12,
+  "idle_fp_total": 0,
+  "synthetic_banner_fp": 0,
+  "overlay_path": "E:\\cr_ai\\data\\benchmarks\\task3_badge_overlay_final.png",
+  "gate_pass": true
+}

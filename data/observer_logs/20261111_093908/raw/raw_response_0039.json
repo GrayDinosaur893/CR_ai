@@ -1,0 +1,42 @@
+{
+  "screen": "battle_arena",
+  "confidence": "high",
+  "components": [
+    {
+      "name": "trophy_count",
+      "box_pct": [0.15, 0.11, 0.28, 0.16],
+      "seen": true
+    },
+    {
+      "name": "time_left",
+      "box_pct": [0.87, 0.09, 1.0, 0.16],
+      "seen": true
+    },
+    {
+      "name": "card_slot_1",
+      "box_pct": [0.32, 0.88, 0.48, 0.96],
+      "seen": true
+    },
+    {
+      "name": "card_slot_2",
+      "box_pct": [0.50, 0.88, 0.66, 0.96],
+      "seen": true
+    },
+    {
+      "name": "card_slot_3",
+      "box_pct": [0.68, 0.88, 0.84, 0.96],
+      "seen": true
+    },
+    {
+      "name": "card_slot_4",
+      "box_pct": [0.86, 0.88, 1.0, 0.96],
+      "seen": true
+    },
+    {
+      "name": "elixir_bar",
+      "box_pct": [0.30, 0.97, 0.70, 1.0],
+      "seen": true
+    }
+  ],
+  "unknown": []
+}

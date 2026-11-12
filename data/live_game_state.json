@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-11-12T17:14:42",
+  "mode": "HUMAN_BASELINE",
+  "gate_unlocked": true,
+  "gate_reason": "UNLOCKED (overall=100.0%, screen=100.0%, mean_iou=0.884)",
+  "screen": "lobby",
+  "confidence": 0.97,
+  "elixir": 0.0,
+  "elixir_leak_sec": 0.54,
+  "elixir_leak_warning": false,
+  "opponent_elixir_est": 5.2,
+  "opponent_intel": {
+    "opp_elixir": 5.2,
+    "opp_elixir_range": [
+      4.2,
+      6.2
+    ],
+    "opp_elixir_known": false,
+    "opp_hand_known": false,
+    "opp_plays_observed": 0,
+    "opp_hand_archetypes": [],
+    "opp_known_cards": [],
+    "opp_cycle_queue": [],
+    "opp_seen_archetypes": [],
+    "opp_has_rusher": false,
+    "opp_has_building_counter": false,
+    "recent_heavy_threat": false,
+    "enemy_all_flying": false,
+    "active_air_threat": false,
+    "left_lane_threats": 0,
+    "right_lane_threats": 0,
+    "our_half_threats": 0,
+    "push_detected": false,
+    "active_track_count": 0,
+    "prediction_unlocked": false,
+    "elixir_leak_warning": false,
+    "elixir_leak_sec": 0.54
+  },
+  "next_card": null,
+  "layout": "gpg_windowed_sidebar",
+  "viewport_px": [
+    81,
+    14,
+    692,
+    1136
+  ],
+  "hand_slots": [],
+  "enemy_threats_count": 0,
+  "enemy_threats": [],
+  "decision": {
+    "action": "wait",
+    "slot": null,
+    "target_tile": null,
+    "reasoning": "Screen is lobby"
+  },
+  "qwen_brain": null,
+  "human_play": null,
+  "scheduler_telemetry": {
+    "global_frame": 6887,
+    "epoch_frame": 20,
+    "active_block_size": 32,
+    "is_opportunity_gate": false,
+    "gate_ms": 333.33,
+    "decision_ready": false
+  },
+  "execution": {
+    "status": "SCHEDULE_WAIT",
+    "executed": false,
+    "reason": "Waiting for next 2^x opportunity gate"
+  },
+  "pipeline_latency_ms": 44.67,
+  "latency_breakdown": {
+    "perception_ms": 40.77,
+    "capture_to_decision_ms": 58.51,
+    "capture_to_tap_ms": 62.27
+  }
+}

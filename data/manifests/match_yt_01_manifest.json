@@ -1,0 +1,10 @@
+{
+  "media_id": "match_yt_01",
+  "source_file": "media/source/match_yt_01.mp4",
+  "fps": 29.97,
+  "duration_seconds": 1258.36,
+  "width": 298,
+  "height": 640,
+  "sampled_frames_count": 31,
+  "sample_interval_sec": 2.0
+}

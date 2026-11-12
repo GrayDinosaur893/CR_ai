@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "reserve_floor": 2.0,
+  "bank_until": 8.5,
+  "counterpush_elixir": 7.0,
+  "leak_threshold": 9.5,
+  "leak_max_sec": 3.0,
+  "slow_roll_cooldown_sec": 7.5
+}

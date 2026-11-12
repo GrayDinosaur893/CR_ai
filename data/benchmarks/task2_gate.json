@@ -1,0 +1,78 @@
+{
+  "task": "Task 2 Elixir Calibration & 8-Template Card ID Gate",
+  "elixir": {
+    "t0_elixir": 5.1,
+    "t0_expected": 5.0,
+    "normal_slope_best": 0.3704,
+    "normal_expected": 0.357,
+    "double_slope_best": 0.7143,
+    "double_expected": 0.714,
+    "normal_within_10pct": true,
+    "double_within_10pct": true
+  },
+  "card_id": {
+    "frames_tested": 48,
+    "non_empty_slots": 172,
+    "identified_slots": 169,
+    "unknown_slots": 3,
+    "accuracy_pct": 98.26,
+    "unknown_pct": 1.74,
+    "cache_hits": 84,
+    "cache_misses": 136,
+    "cycle_s1_transition": [
+      [
+        36,
+        "arrows",
+        "playable"
+      ],
+      [
+        42,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        48,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        54,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        60,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        66,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        72,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        78,
+        "slot_1",
+        "cooldown_empty"
+      ],
+      [
+        84,
+        "cannon",
+        "playable"
+      ]
+    ],
+    "cycle_invalidation_passed": true
+  },
+  "gates": {
+    "card_id_ge_98pct": true,
+    "unknown_le_2pct": true,
+    "cycle_invalidation_ok": true,
+    "elixir_t0_accurate": true,
+    "elixir_slopes_within_10pct": true
+  }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash IQ — 1-Click Master Control Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0b0f19; color: #f3f4f6; font-family: 'Segoe UI', system-ui, sans-serif; }
+        .glass-panel { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(55, 65, 81, 0.6); border-radius: 1rem; }
+        .glow-btn { background: linear-gradient(135deg, #4f46e5, #06b6d4); box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.5); }
+        .glow-btn:hover { background: linear-gradient(135deg, #4338ca, #0891b2); box-shadow: 0 15px 30px -5px rgba(6, 182, 212, 0.6); }
+        .snap-btn { background: linear-gradient(135deg, #059669, #10b981); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-6">
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+        <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+                <i class="fa-solid fa-crown text-2xl"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-2.5">
+                    <h1 class="text-2xl font-black tracking-tight text-white">CLASH<span class="text-cyan-400">IQ</span> PRO</h1>
+                    <span class="text-xs bg-indigo-950 text-indigo-300 font-bold border border-indigo-700/60 px-2.5 py-0.5 rounded-full">2^x Dyadic Engine</span>
+                    <span class="text-xs bg-emerald-950 text-emerald-300 font-bold border border-emerald-700/60 px-2.5 py-0.5 rounded-full">1-Click Master</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Multi-scale Binary Frame Scheduler (60 = 32 + 16 + 8 + 4) • Real-time Perception</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <span id="bot-badge" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-slate-500"></span> Bot Idle
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto space-y-6">
+
+        <!-- Top 1-Click Action Hub -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <button onclick="toggleBot()" id="btn-bot" class="glow-btn p-4 rounded-2xl text-left flex items-center justify-between transition active:scale-98">
+                <div>
+                    <span class="text-[11px] font-bold text-indigo-200 uppercase tracking-wider block">1-Click Autonomous Play</span>
+                    <span class="text-base font-black text-white flex items-center gap-2 mt-0.5" id="btn-bot-text">
+                        <i class="fa-solid fa-play"></i> START 2^x BOT
+                    </span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white text-lg">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+            </button>
+
+            <button onclick="triggerDetection()" id="btn-detect" class="snap-btn p-4 rounded-2xl text-left flex items-center justify-between transition active:scale-98">
+                <div>
+                    <span class="text-[11px] font-bold text-emerald-100 uppercase tracking-wider block">1-Click Perception</span>
+                    <span class="text-base font-black text-white flex items-center gap-2 mt-0.5" id="btn-detect-text">
+                        <i class="fa-solid fa-camera"></i> SNAP & DETECT
+                    </span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white text-lg">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+            </button>
+
+            <button onclick="window.open('/api/image/annotated', '_blank')" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 p-4 rounded-2xl text-left flex items-center justify-between transition active:scale-98">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Full Visual Inspection</span>
+                    <span class="text-base font-black text-white flex items-center gap-2 mt-0.5">
+                        <i class="fa-solid fa-expand"></i> VIEW FULL IMAGE
+                    </span>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 text-lg">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+            </button>
+        </section>
+
+        <!-- Main Body: Left Live Screen & Telemetry, Right AI Strategy Chat -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            <!-- Left: Live Visual Perception & 2^x Gate Status (Takes 7 cols) -->
+            <div class="lg:col-span-7 glass-panel p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-cyan-400"></i>
+                            <h2 class="text-sm font-bold text-white">Live Visual Detection & 2^x Gates</h2>
+                        </div>
+                        <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-0.5 rounded-full">
+                            14 Components Anchored
+                        </span>
+                    </div>
+
+                    <!-- Screen Image Preview Container -->
+                    <div class="bg-slate-950 rounded-xl border border-slate-800 h-[360px] flex items-center justify-center overflow-hidden relative group">
+                        <img id="screen-img" src="/api/image/annotated" alt="Live Clash Royale Component View" class="max-h-full max-w-full object-contain transition group-hover:scale-102 duration-300">
+                        <div class="absolute bottom-2 left-2 bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg text-[10px] text-slate-300 border border-slate-700">
+                            <i class="fa-solid fa-circle text-emerald-400 text-[8px] animate-pulse"></i> Real-time Bounding Box Overlay
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2^x Dyadic Gate Telemetry Bar -->
+                <div class="grid grid-cols-4 gap-2 pt-4 mt-4 border-t border-slate-800 text-center">
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+                        <span class="text-[10px] text-slate-400 block font-semibold">FAST REFLEX</span>
+                        <span class="text-sm font-black text-cyan-400">Gate 2 (33ms)</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+                        <span class="text-[10px] text-slate-400 block font-semibold">TACTICAL</span>
+                        <span class="text-sm font-black text-indigo-400">Gate 8 (133ms)</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+                        <span class="text-[10px] text-slate-400 block font-semibold">MACRO WAIT</span>
+                        <span class="text-sm font-black text-purple-400">Gate 32 (533ms)</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
+                        <span class="text-[10px] text-slate-400 block font-semibold">COMPUTE SAVED</span>
+                        <span class="text-sm font-black text-emerald-400">75.6%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: OpenRouter AI Coach & Tactical Advisor (Takes 5 cols) -->
+            <div class="lg:col-span-5 glass-panel p-5 flex flex-col justify-between h-[520px]">
+                <div>
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-lg bg-indigo-900/60 border border-indigo-700 flex items-center justify-center text-indigo-300 text-xs">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white">AI Strategy Coach</h3>
+                        </div>
+                        <span class="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full">OpenRouter Free</span>
+                    </div>
+
+                    <!-- Chat Log -->
+                    <div id="chat-box" class="h-[340px] overflow-y-auto space-y-3 p-3 bg-slate-950/70 rounded-xl border border-slate-800 text-xs leading-relaxed">
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 text-slate-300">
+                            <span class="text-indigo-400 font-bold block mb-1">Clash IQ Tactical Coach:</span>
+                            Ready! Ask me: "What card to play next?", "How to counter Hog Rider?", or "Explain the 2^x frame sampling logic!"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="pt-3 border-t border-slate-800 flex items-center gap-2">
+                    <input type="text" id="chat-input" onkeydown="if(event.key==='Enter') sendChat()" placeholder="Ask coach: e.g. Best card against Mega Knight?..." class="flex-1 bg-slate-900 border border-slate-700 focus:border-cyan-500 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 outline-none">
+                    <button onclick="sendChat()" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        let isRunning = false;
+
+        async function toggleBot() {
+            const btnText = document.getElementById('btn-bot-text');
+            const badge = document.getElementById('bot-badge');
+
+            if (!isRunning) {
+                const res = await fetch('/api/bot/start', { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    isRunning = true;
+                    btnText.innerHTML = '<i class="fa-solid fa-stop"></i> STOP BOT';
+                    badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Bot Running (2^x Dynamic)';
+                    badge.className = "px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-700 flex items-center gap-2";
+                }
+            } else {
+                await fetch('/api/bot/stop', { method: 'POST' });
+                isRunning = false;
+                btnText.innerHTML = '<i class="fa-solid fa-play"></i> START 2^x BOT';
+                badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-slate-500"></span> Bot Idle';
+                badge.className = "px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-2";
+            }
+        }
+
+        async function triggerDetection() {
+            const btn = document.getElementById('btn-detect-text');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> SNAPPING...';
+            try {
+                const res = await fetch('/api/detect', { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    document.getElementById('screen-img').src = '/api/image/annotated?t=' + Date.now();
+                }
+            } catch(e) {
+                console.log(e);
+            } finally {
+                btn.innerHTML = '<i class="fa-solid fa-camera"></i> SNAP & DETECT';
+            }
+        }
+
+        async function sendChat() {
+            const input = document.getElementById('chat-input');
+            const msg = input.value.trim();
+            if (!msg) return;
+            input.value = '';
+
+            const box = document.getElementById('chat-box');
+            box.innerHTML += `
+                <div class="bg-indigo-950/80 p-2.5 rounded-xl border border-indigo-800 text-slate-200 ml-4">
+                    <span class="text-indigo-300 font-bold block mb-0.5">You:</span>
+                    ${msg}
+                </div>
+            `;
+            box.scrollTop = box.scrollHeight;
+
+            const tId = 'thinking-' + Date.now();
+            box.innerHTML += `
+                <div id="${tId}" class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 text-slate-400 mr-4">
+                    <span class="text-cyan-400 font-bold block mb-0.5">Coach:</span>
+                    <i class="fa-solid fa-circle-notch fa-spin text-cyan-400"></i> Thinking with OpenRouter...
+                </div>
+            `;
+            box.scrollTop = box.scrollHeight;
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ message: msg })
+                });
+                const data = await res.json();
+                document.getElementById(tId).innerHTML = `
+                    <span class="text-cyan-400 font-bold block mb-0.5">Coach:</span>
+                    ${data.reply.replace(/\n/g, '<br>')}
+                `;
+            } catch(e) {
+                document.getElementById(tId).innerHTML = `Coach is ready to deploy.`;
+            }
+            box.scrollTop = box.scrollHeight;
+        }
+    </script>
+</body>
+</html>

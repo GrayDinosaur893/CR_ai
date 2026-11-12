@@ -1,0 +1,48 @@
+{
+  "active_screen": {
+    "timestamp": "11:10:28",
+    "window_size": {
+      "width": 696,
+      "height": 1140
+    },
+    "screen": "GPG_IDLE_CONTAINER",
+    "anchor": "Solid Dark Canvas",
+    "confidence": 0.99,
+    "buttons": []
+  },
+  "history": [
+    {
+      "timestamp": "11:10:26",
+      "window_size": {
+        "width": 696,
+        "height": 1140
+      },
+      "screen": "GPG_IDLE_CONTAINER",
+      "anchor": "Solid Dark Canvas",
+      "confidence": 0.99,
+      "buttons": []
+    },
+    {
+      "timestamp": "11:10:27",
+      "window_size": {
+        "width": 696,
+        "height": 1140
+      },
+      "screen": "GPG_IDLE_CONTAINER",
+      "anchor": "Solid Dark Canvas",
+      "confidence": 0.99,
+      "buttons": []
+    },
+    {
+      "timestamp": "11:10:28",
+      "window_size": {
+        "width": 696,
+        "height": 1140
+      },
+      "screen": "GPG_IDLE_CONTAINER",
+      "anchor": "Solid Dark Canvas",
+      "confidence": 0.99,
+      "buttons": []
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "task": "Task 0 Baseline (pre-optimization)",
+  "live_capture_benchmark": {
+    "source": "foreground_window_proxy",
+    "window_title": "foreground_proxy",
+    "hwnd": 196836,
+    "frames": 60,
+    "printwindow_ms": {
+      "count": 60,
+      "mean": 31.34,
+      "p50": 30.67,
+      "p95": 37.63,
+      "max": 54.15
+    },
+    "mss_ms": {
+      "count": 60,
+      "mean": 16.84,
+      "p50": 15.76,
+      "p95": 22.37,
+      "max": 28.52
+    },
+    "capture_process_ms": {
+      "count": 60,
+      "mean": 61.52,
+      "p50": 61.01,
+      "p95": 71.34,
+      "max": 84.05
+    }
+  },
+  "replay_baseline": {
+    "video_path": "data\\observer_logs\\Recording 2026-11-11 100928.mp4",
+    "frames_processed": 200,
+    "actions_triggered": 2,
+    "target_hz": 15.0,
+    "budget_ms": 66.67,
+    "over_budget_pct": 1.5,
+    "throughput_hz": 28.07,
+    "templates_loaded": 8,
+    "capture_ms": {
+      "count": 200,
+      "mean": 2.11,
+      "p50": 1.71,
+      "p95": 2.72,
+      "max": 48.37
+    },
+    "perception_ms": {
+      "count": 200,
+      "mean": 30.27,
+      "p50": 29.51,
+      "p95": 37.82,
+      "max": 45.62
+    },
+    "decision_ms": {
+      "count": 200,
+      "mean": 0.06,
+      "p50": 0.05,
+      "p95": 0.1,
+      "max": 0.22
+    },
+    "tap_ms": {
+      "count": 200,
+      "mean": 1.28,
+      "p50": 0.01,
+      "p95": 0.02,
+      "max": 126.28
+    },
+    "capture_to_decision_ms": {
+      "count": 200,
+      "mean": 32.44,
+      "p50": 31.34,
+      "p95": 40.87,
+      "max": 78.73
+    },
+    "capture_to_tap_ms": {
+      "count": 200,
+      "mean": 33.72,
+      "p50": 31.38,
+      "p95": 41.75,
+      "max": 157.0
+    }
+  },
+  "combined_synchronous_estimate_ms": {
+    "capture_to_decision_p95_ms": 109.26,
+    "capture_to_tap_p95_ms": 113.09
+  },
+  "gates": {
+    "perception_p95_le_33ms": {
+      "measured": 37.82,
+      "target": 33.0,
+      "passed": false
+    },
+    "capture_to_tap_p95_le_100ms": {
+      "measured": 113.09,
+      "target": 100.0,
+      "passed": false
+    }
+  }
+}

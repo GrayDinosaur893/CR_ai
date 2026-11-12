@@ -1,0 +1,101 @@
+{
+  "videos": [
+    {
+      "video_id": "h16sj_76LSg",
+      "title": "How to Play 2.6 Hog Cycle Like a PRO!!",
+      "url": "https://www.youtube.com/watch?v=h16sj_76LSg",
+      "chunks_parsed": 131,
+      "topic_counts": {
+        "general_2_6_macro": 24,
+        "spell_value_discipline": 28,
+        "outcycle_hog_counters": 15,
+        "patience_and_elixir_hold": 42,
+        "counterpush_synergy": 22
+      }
+    },
+    {
+      "video_id": "uyXYTIJgM4w",
+      "title": "The RETURN of 2.6 Hog Cycle on Top Ladder!!",
+      "url": "https://www.youtube.com/watch?v=uyXYTIJgM4w",
+      "chunks_parsed": 120,
+      "topic_counts": {
+        "general_2_6_macro": 34,
+        "counterpush_synergy": 21,
+        "positive_elixir_trade": 5,
+        "outcycle_hog_counters": 3,
+        "patience_and_elixir_hold": 32,
+        "spell_value_discipline": 25
+      }
+    },
+    {
+      "video_id": "SEBfDB81vZg",
+      "title": "Can 2.0 Hog Cycle WIN on Top Ladder?",
+      "url": "https://www.youtube.com/watch?v=SEBfDB81vZg",
+      "chunks_parsed": 126,
+      "topic_counts": {
+        "general_2_6_macro": 72,
+        "outcycle_hog_counters": 13,
+        "positive_elixir_trade": 3,
+        "patience_and_elixir_hold": 26,
+        "spell_value_discipline": 10,
+        "counterpush_synergy": 2
+      }
+    },
+    {
+      "video_id": "oIWHwBc80EI",
+      "title": "How to COUNT Elixir in Clash Royale (2024)",
+      "url": "https://www.youtube.com/watch?v=oIWHwBc80EI",
+      "chunks_parsed": 41,
+      "topic_counts": {
+        "outcycle_hog_counters": 6,
+        "general_2_6_macro": 21,
+        "patience_and_elixir_hold": 10,
+        "spell_value_discipline": 3,
+        "counterpush_synergy": 1
+      }
+    },
+    {
+      "video_id": "ytWqIi08SZs",
+      "title": "How to COUNT Elixir in Clash Royale (2022)",
+      "url": "https://www.youtube.com/watch?v=ytWqIi08SZs",
+      "chunks_parsed": 34,
+      "topic_counts": {
+        "general_2_6_macro": 14,
+        "patience_and_elixir_hold": 7,
+        "positive_elixir_trade": 5,
+        "spell_value_discipline": 5,
+        "counterpush_synergy": 1,
+        "outcycle_hog_counters": 2
+      }
+    },
+    {
+      "video_id": "ZF2rjDrZV1A",
+      "title": "5 Tips For Better Elixir Management",
+      "url": "https://www.youtube.com/watch?v=ZF2rjDrZV1A",
+      "chunks_parsed": 20,
+      "topic_counts": {
+        "general_2_6_macro": 12,
+        "patience_and_elixir_hold": 5,
+        "spell_value_discipline": 1,
+        "counterpush_synergy": 2
+      }
+    },
+    {
+      "video_id": "ISSqA8mex3s",
+      "title": "How to get SO good at Clash Royale you can't stop winning",
+      "url": "https://www.youtube.com/watch?v=ISSqA8mex3s",
+      "chunks_parsed": 14,
+      "topic_counts": {
+        "counterpush_synergy": 1,
+        "general_2_6_macro": 11,
+        "spell_value_discipline": 2
+      }
+    }
+  ],
+  "reasoning_sft_pairs": 8,
+  "phone_human_sft_pairs": 2,
+  "sft_pairs": 330,
+  "policy_samples": 3538,
+  "sft_path": "E:\\cr_ai\\data\\derived\\ryley_finetune_train.jsonl",
+  "policy_samples_path": "E:\\cr_ai\\data\\derived\\ryley_policy_samples.jsonl"
+}

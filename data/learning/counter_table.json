@@ -1,0 +1,166 @@
+{
+  "single_ground": {
+    "prior": "skeletons",
+    "answers": {
+      "skeletons": {
+        "cost": 1.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.5,
+        "m2": 0.5,
+        "prior_mean": 1.5
+      },
+      "electro_spirit": {
+        "cost": 1.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.3,
+        "m2": 0.5,
+        "prior_mean": 1.3
+      },
+      "knight": {
+        "cost": 3.0,
+        "n": 1,
+        "w": 0.3,
+        "mean": -0.5,
+        "m2": 0.5,
+        "prior_mean": 0.8
+      },
+      "minions": {
+        "cost": 3.0,
+        "n": 1,
+        "w": 0.3,
+        "mean": -0.5,
+        "m2": 0.5,
+        "prior_mean": 0.7
+      },
+      "cannon": {
+        "cost": 3.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.3,
+        "m2": 0.5,
+        "prior_mean": 0.3
+      }
+    }
+  },
+  "heavy_or_rusher": {
+    "prior": "cannon",
+    "answers": {
+      "cannon": {
+        "cost": 3.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.5,
+        "m2": 0.5,
+        "prior_mean": 1.5
+      },
+      "knight": {
+        "cost": 3.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.8,
+        "m2": 0.5,
+        "prior_mean": 0.8
+      },
+      "minions": {
+        "cost": 3.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.7,
+        "m2": 0.5,
+        "prior_mean": 0.7
+      },
+      "musketeer": {
+        "cost": 4.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.6,
+        "m2": 0.5,
+        "prior_mean": 0.6
+      },
+      "skeletons": {
+        "cost": 1.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.4,
+        "m2": 0.5,
+        "prior_mean": 0.4
+      }
+    }
+  },
+  "multi_push": {
+    "prior": "cannon",
+    "answers": {
+      "cannon": {
+        "cost": 3.0,
+        "n": 18,
+        "w": 5.4,
+        "mean": 6.389,
+        "m2": 26.8325,
+        "prior_mean": 1.4
+      },
+      "knight": {
+        "cost": 3.0,
+        "n": 8,
+        "w": 2.4,
+        "mean": 5.313,
+        "m2": 19.6893,
+        "prior_mean": 1.0
+      },
+      "archers": {
+        "cost": 3.0,
+        "n": 1,
+        "w": 0.3,
+        "mean": 0.5,
+        "m2": 0.5,
+        "prior_mean": 0.9
+      },
+      "musketeer": {
+        "cost": 4.0,
+        "n": 3,
+        "w": 0.9,
+        "mean": 3.5,
+        "m2": 0.5,
+        "prior_mean": 0.8
+      }
+    }
+  },
+  "air_threat": {
+    "prior": "musketeer",
+    "answers": {
+      "musketeer": {
+        "cost": 4.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.2,
+        "m2": 0.5,
+        "prior_mean": 1.2
+      },
+      "archers": {
+        "cost": 3.0,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.4,
+        "m2": 0.5,
+        "prior_mean": 1.4
+      },
+      "minions": {
+        "cost": 3.0,
+        "n": 1,
+        "w": 0.3,
+        "mean": 2.0,
+        "m2": 0.5,
+        "prior_mean": 1.3
+      },
+      "electro_spirit": {
+        "cost": 1.0,
+        "n": 3,
+        "w": 0.9,
+        "mean": 7.0,
+        "m2": 0.5,
+        "prior_mean": 0.6
+      }
+    }
+  }
+}

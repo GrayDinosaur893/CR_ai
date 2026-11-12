@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+media/source/
+frames/
+.vscode/
+.idea/
+Install-Clash Royale-GooglePlayGames.exe
+references/
+scratch/
+claude.zip
+recordings/*
+!recordings/session_20261112_170055/
+!recordings/human_20261112_171042/

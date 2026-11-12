@@ -1,0 +1,144 @@
+{
+  "building:heavy_or_rusher": {
+    "prior": "4-2_pull",
+    "arms": {
+      "4-2_pull": {
+        "dy_river": 5,
+        "dx_tower": 4,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.2,
+        "m2": 0.5,
+        "prior_mean": 1.2
+      },
+      "center_pull": {
+        "dy_river": 5,
+        "dx_tower": 5,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.1,
+        "m2": 0.5,
+        "prior_mean": 1.1
+      },
+      "4-3_pull": {
+        "dy_river": 6,
+        "dx_tower": 4,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.0,
+        "m2": 0.5,
+        "prior_mean": 1.0
+      }
+    }
+  },
+  "building:multi_push": {
+    "prior": "center_pull",
+    "arms": {
+      "center_pull": {
+        "dy_river": 5,
+        "dx_tower": 5,
+        "n": 4,
+        "w": 1.2,
+        "mean": 7.875,
+        "m2": 5.0562,
+        "prior_mean": 1.2
+      },
+      "4-2_pull": {
+        "dy_river": 5,
+        "dx_tower": 4,
+        "n": 14,
+        "w": 4.2,
+        "mean": 5.964,
+        "m2": 18.8709,
+        "prior_mean": 1.1
+      },
+      "4-3_pull": {
+        "dy_river": 6,
+        "dx_tower": 4,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.0,
+        "m2": 0.5,
+        "prior_mean": 1.0
+      }
+    }
+  },
+  "cycle:single_ground": {
+    "prior": "mid_kite",
+    "arms": {
+      "mid_kite": {
+        "dy_river": 4,
+        "dx_tower": 4,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.2,
+        "m2": 0.5,
+        "prior_mean": 1.2
+      },
+      "tight_kite": {
+        "dy_river": 4,
+        "dx_tower": 2,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.0,
+        "m2": 0.5,
+        "prior_mean": 1.0
+      },
+      "front_surround": {
+        "dy_river": 5,
+        "dx_tower": 1,
+        "n": 0,
+        "w": 0.0,
+        "mean": 0.8,
+        "m2": 0.5,
+        "prior_mean": 0.8
+      }
+    }
+  },
+  "ranged:air_threat": {
+    "prior": "tower_pocket",
+    "arms": {
+      "tower_pocket": {
+        "dy_river": 10,
+        "dx_tower": 1,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.2,
+        "m2": 0.5,
+        "prior_mean": 1.2
+      },
+      "inner_pocket": {
+        "dy_river": 10,
+        "dx_tower": 3,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.0,
+        "m2": 0.5,
+        "prior_mean": 1.0
+      }
+    }
+  },
+  "ranged:multi_push": {
+    "prior": "tower_pocket",
+    "arms": {
+      "tower_pocket": {
+        "dy_river": 10,
+        "dx_tower": 1,
+        "n": 0,
+        "w": 0.0,
+        "mean": 1.1,
+        "m2": 0.5,
+        "prior_mean": 1.1
+      },
+      "inner_pocket": {
+        "dy_river": 10,
+        "dx_tower": 3,
+        "n": 4,
+        "w": 1.2,
+        "mean": 2.75,
+        "m2": 2.525,
+        "prior_mean": 1.0
+      }
+    }
+  }
+}

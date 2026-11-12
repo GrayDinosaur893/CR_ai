@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "description": "Multi-frame ground truth labels across GPG PC windowed captures, mobile match frames, and non-game negative frames.",
+  "frames": [
+    {
+      "frame_path": "data/observer_logs/20261109_221244/frames/frame_0000.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 2.0,
+      "expected_playable_slots": [false, false, false, false],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.80, 0.03, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.46, 0.07, 0.66, 0.21]},
+        {"name": "opponent_princess_left", "box_pct": [0.24, 0.15, 0.44, 0.29]},
+        {"name": "opponent_princess_right", "box_pct": [0.68, 0.15, 0.88, 0.29]},
+        {"name": "player_princess_left", "box_pct": [0.24, 0.60, 0.44, 0.74]},
+        {"name": "player_princess_right", "box_pct": [0.68, 0.60, 0.88, 0.74]},
+        {"name": "player_king_tower", "box_pct": [0.46, 0.64, 0.66, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.31, 0.84, 0.47, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.48, 0.84, 0.64, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.65, 0.84, 0.81, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.82, 0.84, 0.98, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.30, 0.955, 0.96, 0.996]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000118.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 10.0,
+      "expected_playable_slots": [true, true, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000236.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 7.0,
+      "expected_playable_slots": [true, false, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000354.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 8.0,
+      "expected_playable_slots": [true, true, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000649.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 8.0,
+      "expected_playable_slots": [true, true, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000885.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 7.0,
+      "expected_playable_slots": [true, true, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00001180.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 5.0,
+      "expected_playable_slots": [true, true, false, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00001475.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 6.0,
+      "expected_playable_slots": [true, true, true, true],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_1", "box_pct": [0.22, 0.84, 0.40, 0.95]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00001711.png",
+      "expected_screen": "battle_arena",
+      "expected_elixir": 3.0,
+      "expected_playable_slots": [false, false, false, false],
+      "components": [
+        {"name": "match_timer", "box_pct": [0.82, 0.04, 0.99, 0.12]},
+        {"name": "opponent_king_tower", "box_pct": [0.39, 0.06, 0.61, 0.20]},
+        {"name": "opponent_princess_left", "box_pct": [0.14, 0.13, 0.36, 0.28]},
+        {"name": "opponent_princess_right", "box_pct": [0.64, 0.13, 0.86, 0.28]},
+        {"name": "player_princess_left", "box_pct": [0.14, 0.59, 0.36, 0.73]},
+        {"name": "player_princess_right", "box_pct": [0.64, 0.59, 0.86, 0.73]},
+        {"name": "player_king_tower", "box_pct": [0.39, 0.63, 0.61, 0.80]},
+        {"name": "hand_slot_2", "box_pct": [0.41, 0.84, 0.59, 0.95]},
+        {"name": "hand_slot_3", "box_pct": [0.60, 0.84, 0.78, 0.95]},
+        {"name": "hand_slot_4", "box_pct": [0.79, 0.84, 0.97, 0.95]},
+        {"name": "elixir_bar", "box_pct": [0.22, 0.93, 0.96, 0.985]}
+      ]
+    },
+    {
+      "frame_path": "frames/match_yt_01/00000059.png",
+      "expected_screen": "non_game",
+      "components": []
+    },
+    {
+      "frame_path": "frames/current_screen_now.png",
+      "expected_screen": "non_game",
+      "components": []
+    }
+  ]
+}

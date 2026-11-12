@@ -1,0 +1,88 @@
+{
+  "task": "Task 1 Threaded LatestFrameCapture Gate",
+  "live_capture_benchmark": {
+    "source": "clash_royale",
+    "window_title": "Clash Royale - nopelosthope893",
+    "hwnd": 460000,
+    "frames": 60,
+    "printwindow_ms": {
+      "count": 60,
+      "mean": 42.04,
+      "p50": 42.74,
+      "p95": 54.45,
+      "max": 59.63
+    },
+    "mss_ms": {
+      "count": 60,
+      "mean": 35.95,
+      "p50": 34.98,
+      "p95": 49.58,
+      "max": 139.25
+    },
+    "capture_process_ms": {
+      "count": 60,
+      "mean": 44.3,
+      "p50": 46.17,
+      "p95": 59.39,
+      "max": 63.76
+    }
+  },
+  "threaded_15hz_benchmark": {
+    "ticks": 60,
+    "target_hz": 15.0,
+    "templates_loaded": 11,
+    "capture_stats": {
+      "captured_frames": 119,
+      "consumed_frames": 60,
+      "dropped_frames": 59,
+      "dropped_frames_pct": 49.58,
+      "invalid_frames": 0,
+      "capture_ms_mean": 0.03,
+      "capture_ms_p95": 0.07
+    },
+    "perception_ms": {
+      "count": 60,
+      "mean": 10.55,
+      "p50": 9.54,
+      "p95": 20.79,
+      "max": 25.45
+    },
+    "decision_ms": {
+      "count": 60,
+      "mean": 0.26,
+      "p50": 0.24,
+      "p95": 0.47,
+      "max": 0.7
+    },
+    "capture_to_decision_ms": {
+      "count": 60,
+      "mean": 30.86,
+      "p50": 31.41,
+      "p95": 47.66,
+      "max": 58.69
+    },
+    "capture_to_tap_ms": {
+      "count": 60,
+      "mean": 32.88,
+      "p50": 32.92,
+      "p95": 50.94,
+      "max": 60.77
+    }
+  },
+  "gates": {
+    "perception_p95_le_33ms": {
+      "measured": 20.79,
+      "target": 33.0,
+      "passed": true
+    },
+    "capture_to_tap_p95_le_100ms": {
+      "measured": 50.94,
+      "target": 100.0,
+      "passed": true
+    },
+    "dropped_frames_pct_gt_0": {
+      "measured": 49.58,
+      "passed": true
+    }
+  }
+}

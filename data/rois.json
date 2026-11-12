@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "window_geometry": {
+    "width": 692,
+    "height": 1136,
+    "notes": "Calibrated for Google Play Games PC Clash Royale window at 125% DPI scale"
+  },
+  "battle_rois": {
+    "card_slot_1": {
+      "box_px": [178, 890, 280, 1030],
+      "box_pct": [0.2572, 0.7835, 0.4046, 0.9067],
+      "description": "First playable card slot in hand"
+    },
+    "card_slot_2": {
+      "box_px": [295, 890, 397, 1030],
+      "box_pct": [0.4263, 0.7835, 0.5737, 0.9067],
+      "description": "Second playable card slot in hand"
+    },
+    "card_slot_3": {
+      "box_px": [412, 890, 514, 1030],
+      "box_pct": [0.5954, 0.7835, 0.7428, 0.9067],
+      "description": "Third playable card slot in hand"
+    },
+    "card_slot_4": {
+      "box_px": [529, 890, 631, 1030],
+      "box_pct": [0.7645, 0.7835, 0.9118, 0.9067],
+      "description": "Fourth playable card slot in hand"
+    },
+    "next_card": {
+      "box_px": [68, 930, 142, 1030],
+      "box_pct": [0.0983, 0.8187, 0.2052, 0.9067],
+      "description": "Next upcoming card preview on the left"
+    },
+    "elixir_droplet_digit": {
+      "box_px": [130, 1055, 175, 1095],
+      "box_pct": [0.1879, 0.9287, 0.2529, 0.9639],
+      "description": "Droplet integer (0 to 10) for ground truth verification"
+    },
+    "elixir_bar": {
+      "box_px": [180, 1060, 636, 1090],
+      "box_pct": [0.2601, 0.9331, 0.9191, 0.9595],
+      "description": "Physical purple elixir gauge bar (total 456 px wide = 45.6 px per elixir)"
+    },
+    "battle_timer": {
+      "box_px": [565, 85, 660, 130],
+      "box_pct": [0.8165, 0.0748, 0.9538, 0.1144],
+      "description": "Top right match remaining countdown timer"
+    },
+    "arena_player_bridge_left": {
+      "point_px": [205, 590],
+      "point_pct": [0.2962, 0.5194],
+      "description": "Left bridge placement anchor"
+    },
+    "arena_player_bridge_right": {
+      "point_px": [487, 590],
+      "point_pct": [0.7038, 0.5194],
+      "description": "Right bridge placement anchor"
+    }
+  },
+  "lobby_rois": {
+    "battle_button": {
+      "box_px": [236, 755, 456, 835],
+      "box_pct": [0.341, 0.6646, 0.6589, 0.735],
+      "description": "Main yellow Battle button in lobby"
+    },
+    "trophy_road_banner": {
+      "box_px": [180, 210, 512, 275],
+      "box_pct": [0.2601, 0.1849, 0.7399, 0.2421],
+      "description": "Arena / Trophy rank display"
+    }
+  }
+}
