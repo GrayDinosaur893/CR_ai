@@ -133,6 +133,10 @@ class ComponentDetector:
         self._vp_cache_val: Optional[Dict[str, Any]] = None
         self._vp_cache_age: int = 0
         self._vp_cache_ttl: int = 120
+        self._prev_arena_small: Optional[np.ndarray] = None
+        self._prev_arena_entities: Dict[str, List[Dict[str, Any]]] = {"enemies": [], "allies": []}
+        self._arena_static_skips: int = 0
+        self._last_arena_changed: bool = True
 
     @staticmethod
     def get_source_fingerprint() -> str:
@@ -543,6 +547,36 @@ class ComponentDetector:
 
         ah, aw = arena_crop.shape[:2]
         arena_small = cv2.resize(arena_crop, (max(2, aw // 3), max(2, ah // 3)), interpolation=cv2.INTER_LINEAR)
+        sh, sw = arena_small.shape[:2]
+        active_mask: Optional[np.ndarray] = None
+        if self._prev_arena_small is not None and self._prev_arena_small.shape == arena_small.shape:
+            diff = cv2.absdiff(arena_small, self._prev_arena_small)
+            diff_gray = cv2.cvtColor(diff, cv2.COLOR_BGR2GRAY)
+            _, changed_bin = cv2.threshold(diff_gray, 18, 255, cv2.THRESH_BINARY)
+            changed_frac = cv2.countNonZero(changed_bin) / float(max(1, sh * sw))
+            if changed_frac < 0.004 and self._arena_static_skips < 3:
+                self._arena_static_skips += 1
+                self._last_arena_changed = False
+                return self._prev_arena_entities
+            self._last_arena_changed = changed_frac >= 0.004
+            if 0.0 < changed_frac < 0.35:
+                # Only scan changed arena regions + bounding boxes around previously tracked units
+                active_mask = cv2.dilate(changed_bin, np.ones((15, 15), np.uint8))
+                for group in (self._prev_arena_entities.get("enemies", []), self._prev_arena_entities.get("allies", [])):
+                    for ent in group:
+                        nx, ny = ent.get("norm_vp", [0.0, 0.0])
+                        sx = int((nx * vw - ax1) / 3.0)
+                        sy = int((ny * vh - ay1) / 3.0)
+                        cv2.rectangle(
+                            active_mask,
+                            (max(0, sx - 16), max(0, sy - 16)),
+                            (min(sw - 1, sx + 16), min(sh - 1, sy + 16)),
+                            255,
+                            -1,
+                        )
+        else:
+            self._last_arena_changed = True
+
         hsv = cv2.cvtColor(arena_small, cv2.COLOR_BGR2HSV)
         # C++ SIMD cv2.inRange with tuple bounds avoids per-frame array allocations
         red1 = cv2.inRange(hsv, (0, 130, 102), (7, 255, 255))
@@ -553,6 +587,9 @@ class ComponentDetector:
         red_raw = red1
 
         blue_raw = cv2.inRange(hsv, (92, 125, 98), (125, 255, 255))
+        if active_mask is not None:
+            cv2.bitwise_and(red_raw, active_mask, dst=red_raw)
+            cv2.bitwise_and(blue_raw, active_mask, dst=blue_raw)
         close_kernel = np.ones((2, 2), np.uint8)
 
         def extract_entities(raw_mask: np.ndarray, team: str) -> List[Dict[str, Any]]:
@@ -661,10 +698,14 @@ class ComponentDetector:
                     deduped.append(ent)
             return deduped[:12]
 
-        return {
+        result = {
             "enemies": extract_entities(red_raw, "enemy"),
             "allies": extract_entities(blue_raw, "ally"),
         }
+        self._prev_arena_small = arena_small
+        self._prev_arena_entities = result
+        self._arena_static_skips = 0
+        return result
 
     def detect_components(self, frame: np.ndarray) -> Dict[str, Any]:
         """

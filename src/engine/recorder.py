@@ -44,6 +44,36 @@ class GameplayRecorder:
         self._raw_writer = cv2.VideoWriter(self.raw_video_path, fourcc, self.target_fps, (w, h))
         self._ann_writer = cv2.VideoWriter(self.annotated_video_path, fourcc, self.target_fps, (w, h))
 
+    @staticmethod
+    def _draw_elixir_hand_hud(frame: np.ndarray, payload: Dict[str, Any], record: Dict[str, Any]) -> None:
+        """Overlay our + estimated enemy elixir & hand cards as readable text on annotated video."""
+        h, w = frame.shape[:2]
+        our_elx = float(record.get("elixir") or 0.0)
+        elx_mult = float(record.get("elixir_multiplier") or 1.0)
+        our_hand = record.get("our_hand") or []
+        our_hand_txt = ", ".join(str(c)[:11] for c in our_hand[:4]) if our_hand else "unknown"
+
+        opp_elx = record.get("opp_elixir")
+        opp_range = record.get("opp_elixir_range")
+        opp_hand = record.get("opp_hand") or []
+        opp_plays = int(record.get("opp_plays_count") or 0)
+        opp_elx_txt = f"{float(opp_elx):.1f}" if opp_elx is not None else "?"
+        if isinstance(opp_range, (list, tuple)) and len(opp_range) == 2:
+            opp_elx_txt += f" [{float(opp_range[0]):.1f}-{float(opp_range[1]):.1f}]"
+        opp_hand_txt = ", ".join(str(c)[:11] for c in opp_hand[:4]) if opp_hand else "unknown"
+
+        line1 = f"OUR ELX: {our_elx:.1f} ({int(elx_mult)}x) | HAND: [{our_hand_txt}]"
+        line2 = f"OPP ELX: {opp_elx_txt} | OPP HAND: [{opp_hand_txt}] (plays:{opp_plays})"
+
+        y_top, y_bot = 24, min(h, 62)
+        if y_bot <= y_top + 10:
+            return
+        cv2.rectangle(frame, (0, y_top), (w, y_bot), (12, 18, 32), -1)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        scale = max(0.32, min(0.40, w / 1700.0))
+        cv2.putText(frame, line1, (8, y_top + 14), font, scale, (100, 255, 180), 1, cv2.LINE_AA)
+        cv2.putText(frame, line2, (8, y_top + 31), font, scale, (80, 190, 255), 1, cv2.LINE_AA)
+
     def record_step(
         self,
         raw_frame: np.ndarray,
@@ -54,6 +84,14 @@ class GameplayRecorder:
         """Logs decision telemetry every step and writes video frames at target_fps."""
         exec_info = payload.get("execution") or {}
         decision = payload.get("decision") or {}
+        opp_intel = payload.get("opponent_intel") or {}
+        our_hand = [
+            f"{s.get('card_name') or ('slot_' + str(s.get('slot', '?')))}"
+            for s in (payload.get("hand_slots") or [])
+        ]
+        opp_hand = list(opp_intel.get("opp_hand_archetypes") or [])
+        opp_elx = opp_intel.get("opp_elixir", payload.get("opponent_elixir_est"))
+        opp_range = opp_intel.get("opp_elixir_range")
         record = {
             "t": round(elapsed_sec, 3),
             "timestamp": payload.get("timestamp"),
@@ -61,6 +99,12 @@ class GameplayRecorder:
             "screen": payload.get("screen"),
             "confidence": payload.get("confidence"),
             "elixir": payload.get("elixir"),
+            "elixir_multiplier": float(payload.get("elixir_multiplier") or opp_intel.get("elixir_multiplier") or 1.0),
+            "our_hand": our_hand,
+            "opp_elixir": opp_elx,
+            "opp_elixir_range": opp_range,
+            "opp_hand": opp_hand,
+            "opp_plays_count": opp_intel.get("plays_count", 0),
             "threats": payload.get("enemy_threats_count", 0),
             "action": decision.get("action"),
             "slot": decision.get("slot"),
@@ -88,10 +132,11 @@ class GameplayRecorder:
         tw, th = self._frame_size
         raw_out = raw_frame if (raw_frame.shape[1], raw_frame.shape[0]) == (tw, th) else cv2.resize(raw_frame, (tw, th))
         ann_out = (
-            annotated_frame
+            annotated_frame.copy()
             if (annotated_frame.shape[1], annotated_frame.shape[0]) == (tw, th)
             else cv2.resize(annotated_frame, (tw, th))
         )
+        self._draw_elixir_hand_hud(ann_out, payload, record)
         if self._raw_writer is not None and self._raw_writer.isOpened():
             self._raw_writer.write(raw_out)
         if self._ann_writer is not None and self._ann_writer.isOpened():

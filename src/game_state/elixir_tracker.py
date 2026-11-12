@@ -14,14 +14,50 @@ class ElixirTracker:
         self.player_elixir = initial_elixir
         self.opponent_elixir_range = (4.0, 6.0) # (min, max) uncertainty range
         self.last_timestamp = 0.0
+        self.visual_multiplier: float = 1.0
+        self.current_multiplier: float = 1.0
+        self._obs_window_start_ts: float = 0.0
+        self._obs_window_start_elx: float = initial_elixir
+        self._last_obs_elx: float = initial_elixir
+
+    def get_elixir_multiplier(self, match_seconds: float) -> float:
+        """Dynamic elixir phase multiplier: 1x (0-2m), 2x (2-4m / OT1), 3x (4m+ / OT2+)."""
+        if match_seconds >= 240.0:
+            timer_mult = 3.0
+        elif match_seconds >= 120.0:
+            timer_mult = 2.0
+        else:
+            timer_mult = 1.0
+        self.current_multiplier = max(timer_mult, self.visual_multiplier)
+        return self.current_multiplier
+
+    def observe_player_elixir(self, measured_elixir: float, current_seconds: float) -> float:
+        """Visual backup: infer 2x/3x from actual elixir bar fill slope if timer offset."""
+        if measured_elixir < self._last_obs_elx - 0.5 or measured_elixir >= 9.7:
+            self._obs_window_start_ts = current_seconds
+            self._obs_window_start_elx = measured_elixir
+            self._last_obs_elx = measured_elixir
+            return self.get_elixir_multiplier(current_seconds)
+
+        dt = current_seconds - self._obs_window_start_ts
+        if dt >= 2.0:
+            slope = (measured_elixir - self._obs_window_start_elx) / dt
+            if slope >= 0.92:
+                self.visual_multiplier = max(self.visual_multiplier, 3.0)
+            elif slope >= 0.60:
+                self.visual_multiplier = max(self.visual_multiplier, 2.0)
+            self._obs_window_start_ts = current_seconds
+            self._obs_window_start_elx = measured_elixir
+        self._last_obs_elx = measured_elixir
+        return self.get_elixir_multiplier(current_seconds)
 
     def get_generation_rate(self, match_seconds: float) -> float:
-        if match_seconds < 120.0:  # First 2 mins: single elixir
-            return self.SINGLE_ELIXIR_RATE
-        elif match_seconds < 240.0: # 2 to 4 mins: double elixir
-            return self.DOUBLE_ELIXIR_RATE
-        else: # Overtime triple elixir
+        mult = self.get_elixir_multiplier(match_seconds)
+        if mult >= 3.0:
             return self.TRIPLE_ELIXIR_RATE
+        if mult >= 2.0:
+            return self.DOUBLE_ELIXIR_RATE
+        return self.SINGLE_ELIXIR_RATE
 
     def advance_time(self, current_seconds: float):
         dt = max(0.0, current_seconds - self.last_timestamp)

@@ -949,12 +949,15 @@ class TacticalActionPlanner:
                     }
 
         # 3. Supported / Elixir-Safe Opposite-Lane Punish (avoid naked low-elixir bridge spam)
+        elixir_mult = max(1.0, float(opp_intel.get("elixir_multiplier", 1.0)))
         total_threats = len(arena_threats)
         lane_defenders = [
             t for t in arena_threats
             if ((int(t.get("col", 9)) < 9) == (push_col < 9)) and int(t.get("row", 0)) >= 6
         ]
-        if (now_ts - self._last_push_ts) < 2.2 or ((now_ts - self._last_push_ts) < 4.5 and current_elixir < 8.5):
+        if (now_ts - self._last_push_ts) < (2.2 / elixir_mult) or (
+            (now_ts - self._last_push_ts) < (4.5 / elixir_mult) and current_elixir < 8.5
+        ):
             return {
                 "action": "wait",
                 "slot": None,
@@ -967,9 +970,9 @@ class TacticalActionPlanner:
 
         mgmt = self.learning_tables.management_params
         leak_thresh = float(mgmt.get("leak_threshold", 9.5))
-        leak_max_sec = float(mgmt.get("leak_max_sec", 3.0))
+        leak_max_sec = float(mgmt.get("leak_max_sec", 3.0)) / elixir_mult
         counterpush_elx = float(mgmt.get("counterpush_elixir", 7.0))
-        slow_roll_cd = float(mgmt.get("slow_roll_cooldown_sec", 7.5))
+        slow_roll_cd = float(mgmt.get("slow_roll_cooldown_sec", 7.5)) / elixir_mult
 
         if current_elixir >= leak_thresh:
             if self._leak_start_ts is None:

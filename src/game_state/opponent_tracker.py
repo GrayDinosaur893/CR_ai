@@ -360,6 +360,7 @@ class OpponentTracker:
         return {
             "opp_elixir": float(est["mid"]),
             "opp_elixir_range": [float(est["min"]), float(est["max"])],
+            "elixir_multiplier": float(getattr(elixir_tracker, "current_multiplier", 1.0)) if elixir_tracker is not None else 1.0,
             "opp_elixir_known": elixir_known,
             "opp_hand_known": hand_known,
             "opp_plays_observed": self.plays_count,

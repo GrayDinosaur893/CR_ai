@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-12T17:00:13",
+  "timestamp": "2026-11-12T17:44:15",
   "benchmark_path": "data\\annotations\\benchmark_labels.json",
-  "detector_fingerprint": "6978868eca0d8802",
+  "detector_fingerprint": "06a0aed3dc5930c2",
   "evaluated_frames": 11,
   "iou_threshold": 0.5,
   "screen_accuracy_pct": 100.0,
@@ -12,7 +12,7 @@
   "elixir_mae": 0.056,
   "mean_iou": 0.884,
   "overall_accuracy_pct": 100.0,
-  "avg_latency_ms": 42.99,
+  "avg_latency_ms": 13.88,
   "tp": 105,
   "fp": 0,
   "fn": 0

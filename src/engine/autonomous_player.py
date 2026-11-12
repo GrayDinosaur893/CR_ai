@@ -292,10 +292,11 @@ class AutonomousClashPlayer:
 
         match_sec = max(0.0, elapsed_sec - self._battle_start_sec) if self._battle_start_sec is not None else elapsed_sec
 
-        # Advance opponent elixir estimate heuristically alongside real bar read
+        # Advance opponent elixir estimate heuristically alongside real bar read (+ visual 2x/3x slope backup)
+        player_elixir = float(detection.get("elixir_estimate", 0.0))
         if in_battle_now:
             self.tracker.advance_time(match_sec)
-        player_elixir = float(detection.get("elixir_estimate", 0.0))
+            self.tracker.observe_player_elixir(player_elixir, match_sec)
 
         # Accumulate elixir leak time when capped at >= 9.8 in battle
         if in_battle_now and self._prev_leak_ts is not None:
@@ -482,6 +483,7 @@ class AutonomousClashPlayer:
             "screen": detection["screen"],
             "confidence": detection["screen_confidence"],
             "elixir": player_elixir,
+            "elixir_multiplier": float(self.tracker.current_multiplier),
             "elixir_leak_sec": round(self._elixir_leak_sec, 2),
             "elixir_leak_warning": bool(opp_intel.get("elixir_leak_warning", False)),
             "opponent_elixir_est": opp_elixir,
@@ -637,6 +639,10 @@ class AutonomousClashPlayer:
 
         start_ts = time.time()
         last_loop_ts = start_ts
+        burst_until_ts = start_ts + 2.0
+        idle_period = min(0.24, max(target_period * 3.5, 0.20))
+        prev_elx = 0.0
+        prev_threats = 0
 
         try:
             while not guard.is_halted:
@@ -693,8 +699,27 @@ class AutonomousClashPlayer:
                     f"| {ex['status']}     "
                 )
                 sys.stdout.flush()
+                # Two-speed adaptive cadence: burst (~15 Hz) around threats/plays/changes, idle (~4-5 Hz) when quiet
+                elx_now = float(res.get("elixir", 0.0))
+                threats_now = int(res.get("enemy_threats_count", 0))
+                arena_changed = bool(getattr(self.detector, "_last_arena_changed", True))
+                if (
+                    threats_now > 0
+                    or threats_now != prev_threats
+                    or arena_changed
+                    or ex.get("executed")
+                    or dec.get("action") != "wait"
+                    or res.get("human_play") is not None
+                    or abs(elx_now - prev_elx) >= 0.8
+                ):
+                    burst_until_ts = now_loop_ts + 1.5
+                prev_elx = elx_now
+                prev_threats = threats_now
+                elx_mult = max(1.0, float(res.get("elixir_multiplier", 1.0)))
+                active_idle_period = max(target_period, idle_period / elx_mult)
+                active_period = target_period if now_loop_ts <= burst_until_ts else active_idle_period
                 loop_elapsed = time.perf_counter() - tick_t0
-                sleep_left = target_period - loop_elapsed
+                sleep_left = active_period - loop_elapsed
                 if sleep_left > 0.001:
                     time.sleep(sleep_left)
         except KeyboardInterrupt:
