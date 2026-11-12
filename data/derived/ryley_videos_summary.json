@@ -1,0 +1,132 @@
+{
+  "videos_processed": 10,
+  "total_battle_frames_sampled": 28107,
+  "total_ryley_plays": 2514,
+  "total_defend_plays": 275,
+  "total_offense_or_cycle_plays": 2239,
+  "overall_offense_pct": 89.1,
+  "overall_avg_elixir_at_play": 6.2,
+  "total_proc_sec": 549.3,
+  "per_video": [
+    {
+      "video": "0SAIHMx-aFA.mp4",
+      "duration_sec": 1783.8,
+      "battle_frames_sampled": 3519,
+      "ryley_plays_detected": 309,
+      "defend_plays": 19,
+      "offense_or_cycle_plays": 290,
+      "offense_pct": 93.9,
+      "avg_elixir_at_play": 6.5,
+      "opp_plays_detected": 38,
+      "elapsed_proc_sec": 87.9
+    },
+    {
+      "video": "0rd7JA7PfFA.mp4",
+      "duration_sec": 1410.0,
+      "battle_frames_sampled": 2763,
+      "ryley_plays_detected": 202,
+      "defend_plays": 46,
+      "offense_or_cycle_plays": 156,
+      "offense_pct": 77.2,
+      "avg_elixir_at_play": 6.41,
+      "opp_plays_detected": 35,
+      "elapsed_proc_sec": 88.0
+    },
+    {
+      "video": "1BrRpwJUyL4.mp4",
+      "duration_sec": 1644.4,
+      "battle_frames_sampled": 3243,
+      "ryley_plays_detected": 276,
+      "defend_plays": 18,
+      "offense_or_cycle_plays": 258,
+      "offense_pct": 93.5,
+      "avg_elixir_at_play": 6.26,
+      "opp_plays_detected": 23,
+      "elapsed_proc_sec": 71.0
+    },
+    {
+      "video": "6iQY89kUI1Y.mp4",
+      "duration_sec": 1246.3,
+      "battle_frames_sampled": 2467,
+      "ryley_plays_detected": 235,
+      "defend_plays": 35,
+      "offense_or_cycle_plays": 200,
+      "offense_pct": 85.1,
+      "avg_elixir_at_play": 5.94,
+      "opp_plays_detected": 66,
+      "elapsed_proc_sec": 36.6
+    },
+    {
+      "video": "MT8B23E6WT0.mp4",
+      "duration_sec": 1092.3,
+      "battle_frames_sampled": 2159,
+      "ryley_plays_detected": 189,
+      "defend_plays": 46,
+      "offense_or_cycle_plays": 143,
+      "offense_pct": 75.7,
+      "avg_elixir_at_play": 6.12,
+      "opp_plays_detected": 31,
+      "elapsed_proc_sec": 44.9
+    },
+    {
+      "video": "QUD3nvySwg4.mp4",
+      "duration_sec": 1507.0,
+      "battle_frames_sampled": 2979,
+      "ryley_plays_detected": 323,
+      "defend_plays": 24,
+      "offense_or_cycle_plays": 299,
+      "offense_pct": 92.6,
+      "avg_elixir_at_play": 6.36,
+      "opp_plays_detected": 57,
+      "elapsed_proc_sec": 47.9
+    },
+    {
+      "video": "TDaBy_WABGE.mp4",
+      "duration_sec": 1258.4,
+      "battle_frames_sampled": 2483,
+      "ryley_plays_detected": 228,
+      "defend_plays": 43,
+      "offense_or_cycle_plays": 185,
+      "offense_pct": 81.1,
+      "avg_elixir_at_play": 5.41,
+      "opp_plays_detected": 53,
+      "elapsed_proc_sec": 50.9
+    },
+    {
+      "video": "lI5UW6KSLng.mp4",
+      "duration_sec": 1207.2,
+      "battle_frames_sampled": 2384,
+      "ryley_plays_detected": 169,
+      "defend_plays": 7,
+      "offense_or_cycle_plays": 162,
+      "offense_pct": 95.9,
+      "avg_elixir_at_play": 6.68,
+      "opp_plays_detected": 28,
+      "elapsed_proc_sec": 44.6
+    },
+    {
+      "video": "nWxyF33UaqI.mp4",
+      "duration_sec": 1551.2,
+      "battle_frames_sampled": 3058,
+      "ryley_plays_detected": 285,
+      "defend_plays": 13,
+      "offense_or_cycle_plays": 272,
+      "offense_pct": 95.4,
+      "avg_elixir_at_play": 6.23,
+      "opp_plays_detected": 50,
+      "elapsed_proc_sec": 56.6
+    },
+    {
+      "video": "wdV1G4kZ58c.mp4",
+      "duration_sec": 1544.5,
+      "battle_frames_sampled": 3052,
+      "ryley_plays_detected": 298,
+      "defend_plays": 24,
+      "offense_or_cycle_plays": 274,
+      "offense_pct": 91.9,
+      "avg_elixir_at_play": 6.11,
+      "opp_plays_detected": 46,
+      "elapsed_proc_sec": 20.8
+    }
+  ]
+}

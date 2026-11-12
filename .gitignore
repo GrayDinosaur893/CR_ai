@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 media/source/
+media/ryley_videos/
 frames/
 .vscode/
 .idea/
